@@ -33,7 +33,7 @@ for(var i = 0; i &lt; 25; i++){
 }
 
 global.inventory[0] = copyGun(global.guns[GunNames.M4A4])
-global.primary = global.guns[GunNames.Barreta]
+global.primary = copyGun(global.guns[GunNames.M4A4])
 global.secondary = -1
 </string>
           </argument>

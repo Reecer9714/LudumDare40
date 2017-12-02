@@ -28,8 +28,14 @@
     <sprites name="Menu">
       <sprite>sprites\spr_invetory</sprite>
     </sprites>
+    <sprite>sprites\spr_small_chest</sprite>
+    <sprite>sprites\spr_large_chest</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bk_dlc1</background>
+    <background>background\bk_dlc2</background>
+    <background>background\bk_level1</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="obj_player">
@@ -69,7 +75,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>
-    <room>rooms\rm_inventory</room>
+    <room>rooms\rm_lootbox</room>
+    <room>rooms\rm_level1</room>
+    <room>rooms\rm_dlc1</room>
+    <room>rooms\rm_dlc2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

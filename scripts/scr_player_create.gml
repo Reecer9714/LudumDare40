@@ -1,16 +1,12 @@
 #define scr_player_create
-scr_create_guns()
-
 image_speed = 1
 facing = 1
-lastAngle = 0
 hp = 100
 maxspeed = 3
 hand = instance_create(x,y,obj_hand)
 hand.parent = self
 gun = instance_create(x,y,obj_gun)
 gun.parent = hand
-gun.currentGun = global.primary
 //gun = ??
 audio_listener_orientation(0,0,-1, 0,1,0);
 
@@ -51,10 +47,10 @@ if (place_meeting(x, y+1, obj_collision)) {
     vspeed = 0;
     
     if (Jump){
-        vspeed = -10;
+        vspeed = -12;
     }
 }else{
-    if (vspeed < 10) {
+    if (vspeed < 100) {
         vspeed += 1;
     }
 }
@@ -78,11 +74,6 @@ if (place_meeting(x, y+vspeed , obj_collision)) {
 //Move to gun
 if(PrimaryFire){
     with(gun) script_execute(fireScript, currentGun)
-    //if(hand.alarm[0] == -1) hand.recoil = 2*-facing
-    //var fire = instance_create(arm.x + arm.anchorX,arm.y + arm.anchorY,obj_electricshock);
-    //fire.Parent = arm;
-    //fire.image_angle = fire.Parent.image_angle;
-    //audio_play_sound(s_electric, 3, false);
 }
 
 hand.image_angle = Aim
