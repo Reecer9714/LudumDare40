@@ -1,0 +1,12 @@
+Right = keyboard_check(vk_right) || keyboard_check(ord('D'))
+Left = keyboard_check(vk_left) || keyboard_check(ord('A'))
+RightReleased = keyboard_check_released(vk_right) || keyboard_check_released(ord('D'))
+LeftReleased = keyboard_check_released(vk_left) || keyboard_check_released(ord('A'))
+Jump = keyboard_check(vk_space)
+PrimaryFire = mouse_check_button(mb_left);
+SecondaryFire = mouse_check_button(mb_right);
+PrimaryFirePressed = mouse_check_button_pressed(mb_left);
+SecondaryFirePressed = mouse_check_button_pressed(mb_right);
+PrimaryFireReleased = mouse_check_button_released(mb_left);
+SecondaryFireReleased = mouse_check_button_released(mb_right);
+Aim = point_direction(x,y,mouse_x,mouse_y);
