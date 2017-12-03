@@ -4,7 +4,7 @@ if(!instance_exists(obj_control)) instance_create(0,0,obj_control)
 image_speed = 1
 facing = 1
 hp = 100
-maxspeed = 20
+maxspeed = 5
 hand = instance_create(x,y,obj_hand)
 hand.parent = self
 gun = instance_create(x,y,obj_gun)

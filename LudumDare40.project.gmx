@@ -24,6 +24,8 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_bullet_hit</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_purple_ball</sprite>
+      <sprite>sprites\spr_purple_lazer</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_inventory</sprite>
@@ -47,6 +49,9 @@
       <sprite>sprites\spr_wallet</sprite>
       <sprite>sprites\spr_invbox</sprite>
     </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\spr_dog</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_dlc1</background>
@@ -65,6 +70,7 @@
       <script>scripts\scr_create_guns.gml</script>
       <script>scripts\scr_init_gun.gml</script>
       <script>scripts\createGun.gml</script>
+      <script>scripts\scr_ball_fire.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\Input.gml</script>
@@ -72,6 +78,12 @@
       <script>scripts\attachToObject.gml</script>
       <script>scripts\copyGun.gml</script>
       <script>scripts\cameraFollow.gml</script>
+      <script>scripts\createArray.gml</script>
+    </scripts>
+    <scripts name="Enemies">
+      <script>scripts\scr_dog_idle.gml</script>
+      <script>scripts\createEnemy.gml</script>
+      <script>scripts\initEnemy.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -85,6 +97,7 @@
       <object>objects\obj_shell</object>
       <object>objects\obj_grenade</object>
       <object>objects\obj_grenade_hit</object>
+      <object>objects\obj_plasma_ball</object>
     </objects>
     <objects name="Inventory">
       <object>objects\obj_inventory</object>
@@ -114,6 +127,7 @@
       <object>objects\obj_control</object>
       <object>objects\obj_wallet</object>
     </objects>
+    <object>objects\obj_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>
