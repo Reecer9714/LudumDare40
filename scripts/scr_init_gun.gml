@@ -12,4 +12,5 @@ reload = currentGun[GunIndex.Reload] * room_speed
 bulletsper = currentGun[GunIndex.BulletsPer]
 color = currentGun[GunIndex.Color]
 gunLength = currentGun[GunIndex.GunLength]
+damage = currentGun[GunIndex.Damage]
 magsize = maxmagsize

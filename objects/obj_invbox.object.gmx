@@ -140,6 +140,12 @@ if(global.inventory[index] != -1){
           <argument>
             <kind>1</kind>
             <string>if(instance_position(mouse_x,mouse_y,obj_invbox) == id){
+    var item = global.inventory[index]
+    switch(item[GunIndex.Color]){
+        case c_gray: global.money += 1
+        case c_yellow: global.money += 4
+        case c_blue: global.money += 10
+    }
     global.inventory[index] = -1
 }
 </string>

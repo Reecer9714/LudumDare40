@@ -7,11 +7,11 @@ if(cooldown && argument0[GunIndex.MagSize] > 0){
         var angle = image_angle + irandom_range(-accuracy,accuracy);
         projectile.image_angle = angle;
         projectile.direction = angle;
+        projectile.damage = damage;
     }
     var shell = instance_create(x,y,obj_shell);
-        shell.direction = angle+(120*image_yscale)
+        shell.direction = angle+(110*image_yscale)
         shell.speed = 12
-        shell.gravity = 0.75
         
     cooldown = false;
     argument0[@ GunIndex.MagSize]--;

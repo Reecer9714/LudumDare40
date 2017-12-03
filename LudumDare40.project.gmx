@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_levelexit</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_idle</sprite>
       <sprite>sprites\spr_player_walk</sprite>
@@ -14,6 +13,7 @@
     </sprites>
     <sprites name="Guns">
       <sprite>sprites\spr_ar</sprite>
+      <sprite>sprites\spr_rpg</sprite>
       <sprite>sprites\spr_pistol</sprite>
       <sprite>sprites\spr_grenade_launcher</sprite>
       <sprite>sprites\spr_shotgun</sprite>
@@ -26,6 +26,7 @@
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_purple_ball</sprite>
       <sprite>sprites\spr_purple_lazer</sprite>
+      <sprite>sprites\spr_rocket</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_inventory</sprite>
@@ -51,7 +52,11 @@
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_dog</sprite>
+      <sprite>sprites\spr_boss_moon</sprite>
     </sprites>
+    <sprite>sprites\spr_levelexit</sprite>
+    <sprite>sprites\spr_money</sprite>
+    <sprite>sprites\spr_coin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_dlc1</background>
@@ -71,6 +76,7 @@
       <script>scripts\scr_init_gun.gml</script>
       <script>scripts\createGun.gml</script>
       <script>scripts\scr_ball_fire.gml</script>
+      <script>scripts\scr_rocket_fire.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\Input.gml</script>
@@ -79,12 +85,16 @@
       <script>scripts\copyGun.gml</script>
       <script>scripts\cameraFollow.gml</script>
       <script>scripts\createArray.gml</script>
+      <script>scripts\addItem.gml</script>
     </scripts>
     <scripts name="Enemies">
       <script>scripts\scr_dog_idle.gml</script>
       <script>scripts\createEnemy.gml</script>
       <script>scripts\initEnemy.gml</script>
     </scripts>
+    <script>scripts\openCrate.gml</script>
+    <script>scripts\buyCrate.gml</script>
+    <script>scripts\drawCrate.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -98,6 +108,7 @@
       <object>objects\obj_grenade</object>
       <object>objects\obj_grenade_hit</object>
       <object>objects\obj_plasma_ball</object>
+      <object>objects\obj_rocket</object>
     </objects>
     <objects name="Inventory">
       <object>objects\obj_inventory</object>
@@ -117,8 +128,8 @@
     </objects>
     <objects name="Lootboxes">
       <object>objects\obj_small_crate</object>
-      <object>objects\obj_large_crate</object>
       <object>objects\obj_medium_crate</object>
+      <object>objects\obj_large_crate</object>
     </objects>
     <objects name="System">
       <object>objects\obj_end</object>
@@ -126,8 +137,13 @@
       <object>objects\obj_pause</object>
       <object>objects\obj_control</object>
       <object>objects\obj_wallet</object>
+      <object>objects\obj_money_fountain</object>
+      <object>objects\obj_lootbox</object>
     </objects>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_coin</object>
+    <object>objects\obj_money</object>
+    <object>objects\obj_boss_moon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>

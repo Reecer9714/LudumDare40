@@ -29,7 +29,7 @@
 if(global.currentLevel &lt; 3){
     if(global.boughtPass){
         //Show start game button
-        instance_activate_object(obj_startgame) 
+        instance_activate_object(obj_startgame)
     }else{
         //ask if they want to buy the dlc
         var yes = instance_create(x-96,y+144,obj_yes);

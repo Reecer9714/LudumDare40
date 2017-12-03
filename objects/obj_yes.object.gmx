@@ -50,16 +50,16 @@
             <kind>1</kind>
             <string>switch(mode){
     case 0:
-        global.money -= 30
+        global.money -= 29.99
         global.boughtPass = true
         room_goto(rm_menu)
         break;
     case 1:
-        global.money -= 20
+        global.money -= 19.99
         room_goto(rm_dlc1)
         break;
     case 2:
-        global.money -= 20
+        global.money -= 19.99
         room_goto(rm_dlc2)
         break;
 }
