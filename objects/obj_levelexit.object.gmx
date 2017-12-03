@@ -48,7 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 1
+            <string>other.visible = false
+image_speed = 1
 </string>
           </argument>
         </arguments>
@@ -71,7 +72,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
+            <string>global.currentLevel++
+global.money += 30
+room_goto(rm_end)
+obj_player.visible = true
 </string>
           </argument>
         </arguments>

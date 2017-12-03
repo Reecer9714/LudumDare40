@@ -3,7 +3,7 @@
   <spriteName>spr_yes</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -52,7 +52,7 @@
     case 0:
         global.money -= 30
         global.boughtPass = true
-        room_goto(rm_level1)
+        room_goto(rm_menu)
         break;
     case 1:
         global.money -= 20

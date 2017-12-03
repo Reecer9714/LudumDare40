@@ -3,7 +3,7 @@
   <spriteName>spr_no</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -50,13 +50,13 @@
             <kind>1</kind>
             <string>switch(mode){
     case 0:
-        room_goto(rm_lootbox)
+        room_goto(rm_menu)
         break;
     case 1:
-        room_goto(rm_end)
+        game_end()
         break;
     case 2:
-        room_goto(rm_end)
+        game_end()
         break;
 }
 </string>
