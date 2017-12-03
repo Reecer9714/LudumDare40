@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -81,28 +81,31 @@ for(var i = 0; i &lt; 25; i++){
           <argument>
             <kind>1</kind>
             <string>//Primary
-draw_rectangle(baseSize,baseSize,baseSize*2,baseSize*2,true)
+var viewX = view_xview[0]
+
+draw_rectangle_colour(viewX+baseSize/2,baseSize/2,viewX+baseSize*4,baseSize*5,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false)
+draw_sprite(spr_invbox,0,viewX+baseSize,baseSize)
 if(global.primary != -1){
-    draw_text(baseSize,baseSize*2,"Name: "+global.primary[GunIndex.Name])
+    draw_text(viewX+baseSize,baseSize*2,"Name: "+global.primary[GunIndex.Name])
     var color = global.primary[GunIndex.Color]
     var sprite = global.primary[GunIndex.Sprite]
-    var xx = (baseSize + 32) - sprite_get_xoffset(sprite)
+    var xx = viewX+(baseSize + 32) - sprite_get_xoffset(sprite)
     var yy = (baseSize + 36) + sprite_get_yoffset(sprite)
     draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
 }else{
-    draw_text(baseSize,baseSize*2,"Left Click to Equip")
+    draw_text(viewX+baseSize,baseSize*2,"Left Click to Equip")
 }
 //Secondary
-draw_rectangle(baseSize,baseSize*3,baseSize*2,baseSize*4,true)
+draw_sprite(spr_invbox,0,viewX+baseSize,baseSize*3)
 if(global.secondary != -1){
     draw_text(baseSize,baseSize*4,"Name: "+global.secondary[GunIndex.Name])
     var color = global.secondary[GunIndex.Color]
     var sprite = global.secondary[GunIndex.Sprite]
-    var xx = (baseSize + 32) - sprite_get_xoffset(sprite)
+    var xx = viewX+(baseSize + 32) - sprite_get_xoffset(sprite)
     var yy = (baseSize*3 + 36) + sprite_get_yoffset(sprite)
     draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
 }else{
-    draw_text(baseSize,baseSize*4,"Right Click to Equip")
+    draw_text(viewX+baseSize,baseSize*4,"Right Click to Equip")
 }
 
 //Draw Inventory

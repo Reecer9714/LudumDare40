@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]+view_hview[0]/2,obj_menu_inventory)
+            <string>instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]-32+view_hview[0]/2,obj_menu_inventory)
+instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]+48+view_hview[0]/2,obj_store)
 </string>
           </argument>
         </arguments>
@@ -50,6 +51,7 @@
             <kind>1</kind>
             <string>global.pause = false
 instance_destroy(obj_menu_inventory)
+instance_destroy(obj_store)
 instance_destroy()
 </string>
           </argument>

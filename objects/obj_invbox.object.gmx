@@ -3,7 +3,7 @@
   <spriteName>spr_invbox</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -106,13 +106,14 @@ with(obj_gun){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>var viewX = view_xview[0]
+draw_sprite(sprite_index,0,viewX+x,y)
 
 if(global.inventory[index] != -1){
     var item = global.inventory[index];
     var color = item[GunIndex.Color]
     var sprite = item[GunIndex.Sprite]
-    var xx = (x + 32) - sprite_get_xoffset(sprite)
+    var xx = (viewX+x + 32) - sprite_get_xoffset(sprite)
     var yy = (y + 36) + sprite_get_yoffset(sprite)
     draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
 }
