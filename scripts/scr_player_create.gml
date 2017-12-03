@@ -1,8 +1,10 @@
 #define scr_player_create
+if(!instance_exists(obj_control)) instance_create(0,0,obj_control)
+
 image_speed = 1
 facing = 1
 hp = 100
-maxspeed = 3
+maxspeed = 5
 hand = instance_create(x,y,obj_hand)
 hand.parent = self
 gun = instance_create(x,y,obj_gun)
@@ -34,16 +36,13 @@ if(Right){
     sprite_index = spr_player_idle
     image_speed = 1
 }
-//image_speed = clamp(hspeed,-1,1);
 
 if(RightReleased || LeftReleased){
     image_index = 0
 }
 
-
-
 //Jump
-if (place_meeting(x, y+1, obj_collision)) {
+if(place_meeting(x, y+1, obj_collision)){
     vspeed = 0;
     
     if (Jump){
@@ -56,7 +55,7 @@ if (place_meeting(x, y+1, obj_collision)) {
 }
 
 //Horizontal
-if (place_meeting(x+hspeed, y , obj_collision)) { 
+if(place_meeting(x+hspeed, y , obj_collision)){ 
     while (!place_meeting(x+sign(hspeed), y, obj_collision)) {
         x+= sign(hspeed);
     }
@@ -70,6 +69,8 @@ if (place_meeting(x, y+vspeed , obj_collision)) {
     }
     vspeed = 0;
 }
+
+cameraFollow(0,self)
 
 //Move to gun
 if(PrimaryFire){

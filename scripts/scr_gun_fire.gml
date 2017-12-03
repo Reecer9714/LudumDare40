@@ -10,7 +10,7 @@ if(cooldown && argument0[GunIndex.MagSize] > 0){
     }
     var shell = instance_create(x,y,obj_shell);
         shell.direction = angle+(120*image_yscale)
-        shell.speed = 8
+        shell.speed = 12
         shell.gravity = 0.75
         
     cooldown = false;

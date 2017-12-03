@@ -53,7 +53,7 @@ global.inventory[index] = global.secondary
 global.secondary = temp
 with(obj_gun){
     currentGun = global.secondary
-    scr_init_gun(global.secondary)
+    if(currentGun != -1) scr_init_gun(global.secondary)
 }
 </string>
           </argument>
@@ -82,7 +82,7 @@ global.inventory[index] = global.primary
 global.primary = temp
 with(obj_gun){
     currentGun = global.primary
-    scr_init_gun(global.primary)
+    if(currentGun != -1) scr_init_gun(global.primary)
 }
 </string>
           </argument>
@@ -112,7 +112,9 @@ if(global.inventory[index] != -1){
     var item = global.inventory[index];
     var color = item[GunIndex.Color]
     var sprite = item[GunIndex.Sprite]
-    draw_sprite_ext(sprite,0,x+(64-sprite_get_width(sprite))/2.5,y+(64-sprite_get_height(sprite)),3,3,45,color,1)
+    var xx = (x + 32) - sprite_get_xoffset(sprite)
+    var yy = (y + 36) + sprite_get_yoffset(sprite)
+    draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
 }
 </string>
           </argument>

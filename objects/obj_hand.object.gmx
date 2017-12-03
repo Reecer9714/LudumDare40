@@ -77,7 +77,7 @@ if(recoil == 0) alarm[0] = -1
             <string>if(parent != -1){
     var recoilX = parent.image_xscale * lengthdir_x(recoil, image_angle)
     var recoilY = parent.image_xscale * lengthdir_y(recoil, image_angle)
-    attachToObject(parent,recoilX, recoilY)
+    attachToObject(parent, 6+recoilX, recoilY)
     image_yscale = parent.image_xscale;
 }
 if(recoil != 0) alarm[0] = 1

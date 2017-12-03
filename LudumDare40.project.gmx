@@ -52,6 +52,7 @@
     <script>scripts\scr_init_gun.gml</script>
     <script>scripts\arrayEqual.gml</script>
     <script>scripts\copyGun.gml</script>
+    <script>scripts\cameraFollow.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -74,9 +75,9 @@
     <object>objects\obj_pause</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_buygame</room>
     <room>rooms\rm_lootbox</room>
-    <room>rooms\rm_level1</room>
     <room>rooms\rm_dlc1</room>
     <room>rooms\rm_dlc2</room>
   </rooms>
