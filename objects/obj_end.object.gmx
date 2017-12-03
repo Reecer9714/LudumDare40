@@ -26,19 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>instance_deactivate_object(obj_startgame) 
-if(global.currentLevel &lt; 2){
+if(global.currentLevel &lt; 3){
     if(global.boughtPass){
         //Show start game button
         instance_activate_object(obj_startgame) 
     }else{
         //ask if they want to buy the dlc
-        var yes = instance_create(x-96,y+128,obj_yes);
-        var no = instance_create(x+96,y+128,obj_no);
+        var yes = instance_create(x-96,y+144,obj_yes);
+        var no = instance_create(x+96,y+144,obj_no);
         yes.mode = global.currentLevel;
         no.mode = global.currentLevel;
     }
 }else{
-    instance_create(x,y+96,obj_exit)
+    instance_create(x,y+284,obj_exit)
 }
 </string>
           </argument>
@@ -74,7 +74,7 @@ if(!global.boughtPass) draw_text(x,y+96,"Buy it now for $20")
 }else{
     draw_text(x,y+32,"Thank You for giving us your mo... time")
     draw_text(x,y+64,"Pre-Orders for Boxes of Guns 2: Loot Harder")
-    draw_text(x,y+95,"begin on December 5") 
+    draw_text(x,y+95,"begins on December 5") 
 }
 draw_set_halign(fa_left)
 </string>
