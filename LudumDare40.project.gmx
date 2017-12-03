@@ -6,22 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_levelexit</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_idle</sprite>
       <sprite>sprites\spr_player_walk</sprite>
       <sprite>sprites\spr_player_arms</sprite>
     </sprites>
-    <sprite>sprites\spr_medium_chest</sprite>
-    <sprite>sprites\spr_large_chest</sprite>
-    <sprite>sprites\spr_small_chest</sprite>
     <sprites name="Guns">
       <sprite>sprites\spr_ar</sprite>
       <sprite>sprites\spr_pistol</sprite>
       <sprite>sprites\spr_grenade_launcher</sprite>
       <sprite>sprites\spr_shotgun</sprite>
     </sprites>
-    <sprite>sprites\spr_collision</sprite>
-    <sprite>sprites\spr_invbox</sprite>
     <sprites name="GunStuff">
       <sprite>sprites\spr_explosion</sprite>
       <sprite>sprites\spr_grenade</sprite>
@@ -41,8 +37,16 @@
       <sprite>sprites\spr_yes</sprite>
       <sprite>sprites\spr_no</sprite>
     </sprites>
-    <sprite>sprites\spr_wallet</sprite>
-    <sprite>sprites\spr_levelexit</sprite>
+    <sprites name="LootBox">
+      <sprite>sprites\spr_small_chest</sprite>
+      <sprite>sprites\spr_medium_chest</sprite>
+      <sprite>sprites\spr_large_chest</sprite>
+    </sprites>
+    <sprites name="System">
+      <sprite>sprites\spr_collision</sprite>
+      <sprite>sprites\spr_wallet</sprite>
+      <sprite>sprites\spr_invbox</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_dlc1</background>
@@ -55,22 +59,25 @@
     <scripts name="obj_player">
       <script>scripts\scr_player_create.gml</script>
     </scripts>
-    <script>scripts\Input.gml</script>
-    <script>scripts\attachToObject.gml</script>
     <scripts name="Guns">
       <script>scripts\scr_gun_fire.gml</script>
       <script>scripts\scr_grenade_fire.gml</script>
+      <script>scripts\scr_create_guns.gml</script>
+      <script>scripts\scr_init_gun.gml</script>
+      <script>scripts\createGun.gml</script>
     </scripts>
-    <script>scripts\scr_create_guns.gml</script>
-    <script>scripts\createGun.gml</script>
-    <script>scripts\scr_init_gun.gml</script>
-    <script>scripts\arrayEqual.gml</script>
-    <script>scripts\copyGun.gml</script>
-    <script>scripts\cameraFollow.gml</script>
+    <scripts name="Util">
+      <script>scripts\Input.gml</script>
+      <script>scripts\arrayEqual.gml</script>
+      <script>scripts\attachToObject.gml</script>
+      <script>scripts\copyGun.gml</script>
+      <script>scripts\cameraFollow.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_hand</object>
+    <object>objects\obj_levelexit</object>
     <objects name="Guns">
       <object>objects\obj_gun</object>
       <object>objects\obj_bullet</object>
@@ -79,17 +86,10 @@
       <object>objects\obj_grenade</object>
       <object>objects\obj_grenade_hit</object>
     </objects>
-    <object>objects\obj_collision</object>
-    <object>objects\obj_pause</object>
-    <object>objects\obj_control</object>
     <objects name="Inventory">
       <object>objects\obj_inventory</object>
       <object>objects\obj_invbox</object>
     </objects>
-    <object>objects\obj_small_crate</object>
-    <object>objects\obj_medium_crate</object>
-    <object>objects\obj_large_crate</object>
-    <object>objects\obj_wallet</object>
     <objects name="Menu">
       <object>objects\obj_menu_inventory</object>
       <object>objects\obj_buygame</object>
@@ -102,16 +102,28 @@
       <object>objects\obj_store</object>
       <object>objects\obj_back</object>
     </objects>
-    <object>objects\obj_levelexit</object>
-    <object>objects\obj_end</object>
+    <objects name="Lootboxes">
+      <object>objects\obj_small_crate</object>
+      <object>objects\obj_large_crate</object>
+      <object>objects\obj_medium_crate</object>
+    </objects>
+    <objects name="System">
+      <object>objects\obj_end</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_pause</object>
+      <object>objects\obj_control</object>
+      <object>objects\obj_wallet</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_lootbox</room>
-    <room>rooms\rm_level1</room>
-    <room>rooms\rm_dlc1</room>
-    <room>rooms\rm_dlc2</room>
+    <rooms name="Levels">
+      <room>rooms\rm_level1</room>
+      <room>rooms\rm_dlc1</room>
+      <room>rooms\rm_dlc2</room>
+    </rooms>
     <room>rooms\rm_end</room>
   </rooms>
   <help>
