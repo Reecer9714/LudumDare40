@@ -114,6 +114,10 @@ if(parent != -1){
     image_angle = parent.image_angle    
 }
 
+if(alarm[1] == -1 &amp;&amp; currentGun[GunIndex.MagSize] &lt;= 0){
+    alarm[1] = reload
+}
+
 if(keyboard_check_pressed(ord('F'))){
     if(global.primary == -1 || global.secondary == -1) exit;
     if(arrayEqual(currentGun,global.primary)){
@@ -123,12 +127,9 @@ if(keyboard_check_pressed(ord('F'))){
     }
     scr_init_gun(currentGun)
     alarm[0] = -1
+    alarm[1] = -1
     cooldown = true
-    if(currentGun[GunIndex.MagSize] &lt;= 0){
-        alarm[1] = reload
-    }else{
-        alarm[1] = -1
-    }
+    
 }
 </string>
           </argument>
@@ -152,8 +153,8 @@ if(keyboard_check_pressed(ord('F'))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x,y,alarm[1])
-draw_text(x,y-16,currentGun[GunIndex.MagSize])
+            <string>//Draw Ammo
+//Draw Reloading
 draw_sprite_ext(sprite, 0, x,y, image_xscale,image_yscale, image_angle, color, 1)
 </string>
           </argument>

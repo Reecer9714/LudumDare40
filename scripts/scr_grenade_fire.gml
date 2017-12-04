@@ -11,7 +11,7 @@ if(cooldown && magsize > 0){
     }
         
     cooldown = false;
-    magsize--;
-    alarm[1] = reload;
+    argument0[@ GunIndex.MagSize]--;
+    if(argument0[GunIndex.MagSize] <=0) alarm[1] = reload;
     alarm[0] = firerate;
 }

@@ -4,7 +4,7 @@ if(!instance_exists(obj_control)) instance_create(0,0,obj_control)
 image_speed = 1
 facing = 1
 hp = 100
-maxspeed = 5
+maxspeed = 25
 hand = instance_create(x,y,obj_hand)
 hand.parent = self
 gun = instance_create(x,y,obj_gun)
@@ -14,7 +14,11 @@ audio_listener_orientation(0,0,-1, 0,1,0);
 
 #define scr_player_step
 Input();
-if(global.pause) exit;
+if(global.pause){
+    if(!instance_exists(obj_pause)){
+        global.pause = false
+    }else exit;
+}
 if(facing != 1 && (Aim + 90) mod 360 < 180){
     image_xscale = 1;
     facing = 1;

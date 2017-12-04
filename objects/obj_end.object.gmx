@@ -70,7 +70,8 @@ if(global.currentLevel == 1) draw_text(x,y+32,"Continue the Fun in the Tech DLC,
 if(global.currentLevel == 2) draw_text(x,y+32,"Continue the Fun in the Space DLC,")
 draw_text(x,y+64,"which adds a new level, weapons, and enemies")
 
-if(!global.boughtPass) draw_text(x,y+96,"Buy it now for $20")
+if(!global.boughtPass){ draw_text(x,y+96,"Buy it now for $20")
+}else { draw_text(x,y+96,"Press Start to Play Now")}
 }else{
     draw_text(x,y+32,"Thank You for giving us your mo... time")
     draw_text(x,y+64,"Pre-Orders for Boxes of Guns 2: Loot Harder")
