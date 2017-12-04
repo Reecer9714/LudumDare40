@@ -54,9 +54,16 @@
       <sprite>sprites\spr_invbox</sprite>
     </sprites>
     <sprites name="Enemies">
-      <sprite>sprites\spr_dog</sprite>
+      <sprite>sprites\spr_purple_dog</sprite>
+      <sprite>sprites\spr_red_dog</sprite>
+      <sprite>sprites\spr_blue_dog</sprite>
       <sprite>sprites\spr_alienboss</sprite>
       <sprite>sprites\spr_tank</sprite>
+      <sprite>sprites\obj_soldier_idle</sprite>
+      <sprite>sprites\spr_soldier_walk</sprite>
+      <sprite>sprites\spr_alien</sprite>
+      <sprite>sprites\spr_techorb</sprite>
+      <sprite>sprites\spr_techboss</sprite>
     </sprites>
     <sprite>sprites\spr_levelexit</sprite>
     <sprite>sprites\spr_money</sprite>
@@ -95,11 +102,13 @@
       <script>scripts\scr_dog_idle.gml</script>
       <script>scripts\createEnemy.gml</script>
       <script>scripts\initEnemy.gml</script>
-      <script>scripts\script21.gml</script>
+      <script>scripts\scr_minion_idle.gml</script>
     </scripts>
-    <script>scripts\openCrate.gml</script>
-    <script>scripts\buyCrate.gml</script>
-    <script>scripts\drawCrate.gml</script>
+    <scripts name="LootBox">
+      <script>scripts\openCrate.gml</script>
+      <script>scripts\drawCrate.gml</script>
+      <script>scripts\buyCrate.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -149,12 +158,15 @@
       <object>objects\obj_army_trigger</object>
       <object>objects\obj_tech_trigger</object>
       <object>objects\obj_space_trigger</object>
+      <object>objects\obj_enemy</object>
     </objects>
-    <object>objects\obj_enemy</object>
+    <objects name="Boss">
+      <object>objects\obj_boss_army</object>
+      <object>objects\obj_boss_tech</object>
+      <object>objects\obj_boss_moon</object>
+    </objects>
     <object>objects\obj_coin</object>
     <object>objects\obj_money</object>
-    <object>objects\obj_boss_moon</object>
-    <object>objects\obj_boss_army</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>

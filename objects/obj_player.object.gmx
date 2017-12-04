@@ -73,6 +73,7 @@
             <kind>1</kind>
             <string>if(other.enemy){
     hp -= other.damage
+    instance_destroy(other)
 }
 </string>
           </argument>

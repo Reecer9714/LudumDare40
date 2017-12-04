@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mage_alpha = 0;
+            <string>image_alpha = 0;
 image_speed = 0;
 activated = false;
 attack_speed = 15;
@@ -62,7 +62,16 @@ instance_deactivate_object(self);
           <argument>
             <kind>1</kind>
             <string>///Army
+spawned++;
 
+var enemy = createEnemy(room_width,y,spr_player_idle,100,1);
+enemy.hspeed = -5;
+
+if(spawned &lt; 3){
+    alarm[1] = 5
+}else{
+    spawned = 0
+}
 </string>
           </argument>
         </arguments>
@@ -86,6 +95,13 @@ instance_deactivate_object(self);
           <argument>
             <kind>1</kind>
             <string>///Canon
+var xx = x-16;
+var yy = y;
+var bullet = instance_create(xx,yy,obj_rocket);
+bullet.enemy = true;
+bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
+bullet.image_angle = bullet.direction
+image_index = 1
 </string>
           </argument>
         </arguments>
@@ -110,11 +126,19 @@ instance_deactivate_object(self);
             <kind>1</kind>
             <string>///Machine Gun
 bulletsShot++;
-var xx = x;
-var yy = y;
+var xx = x-1;
+var yy = y+8;
 var bullet = instance_create(xx,yy,obj_bullet);
 bullet.enemy = true;
 bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
+bullet.image_angle = bullet.direction
+image_index = 2
+
+if(bulletsShot &lt; 10){
+    alarm[1] = 5
+}else{
+    bulletsShot = 0
+}
 </string>
           </argument>
         </arguments>
@@ -141,7 +165,7 @@ bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
 var attack = choose(1,2,3);
 alarm[attack] = attack_speed;
 
-alarm[0] = 60;
+alarm[0] = 90;
 </string>
           </argument>
         </arguments>
@@ -170,6 +194,29 @@ alarm[0] = 60;
      image_alpha = lerp(image_alpha, 0, 0.1);
 } 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index = 0
 </string>
           </argument>
         </arguments>
