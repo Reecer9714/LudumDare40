@@ -136,6 +136,43 @@ if(keyboard_check_pressed(ord('F'))){
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var height = display_get_gui_height()
+
+//Draw Ammo
+var sep = 16
+for(var i = 0; i &lt; currentGun[GunIndex.MagSize]; i++){
+    var sprite = object_get_sprite(currentGun[GunIndex.Bullet])
+    draw_sprite_ext(sprite,0,sep+i*sprite_get_height(sprite)*3,height-sprite_get_height(sprite)*3-16,3,3,90,c_white,1)
+    sep+=4
+}
+//Draw Reloading
+if(currentGun[GunIndex.MagSize] &lt;= 0){
+    var val = 1-alarm[1]/reload;
+    draw_healthbar(16,height-48,250,height-16,val*100,c_black,c_white,c_white,0,true,true)
+    draw_text(16,height-32-string_height(" "),"Reloading")
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -153,9 +190,7 @@ if(keyboard_check_pressed(ord('F'))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draw Ammo
-//Draw Reloading
-draw_sprite_ext(sprite, 0, x,y, image_xscale,image_yscale, image_angle, color, 1)
+            <string>draw_sprite_ext(sprite, 0, x,y, image_xscale,image_yscale, image_angle, color, 1)
 </string>
           </argument>
         </arguments>

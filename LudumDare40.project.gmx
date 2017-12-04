@@ -49,6 +49,7 @@
     </sprites>
     <sprites name="System">
       <sprite>sprites\spr_collision</sprite>
+      <sprite>sprites\spr_switch</sprite>
       <sprite>sprites\spr_wallet</sprite>
       <sprite>sprites\spr_invbox</sprite>
     </sprites>
@@ -94,6 +95,7 @@
       <script>scripts\scr_dog_idle.gml</script>
       <script>scripts\createEnemy.gml</script>
       <script>scripts\initEnemy.gml</script>
+      <script>scripts\script21.gml</script>
     </scripts>
     <script>scripts\openCrate.gml</script>
     <script>scripts\buyCrate.gml</script>
@@ -144,6 +146,9 @@
       <object>objects\obj_wallet</object>
       <object>objects\obj_money_fountain</object>
       <object>objects\obj_lootbox</object>
+      <object>objects\obj_army_trigger</object>
+      <object>objects\obj_tech_trigger</object>
+      <object>objects\obj_space_trigger</object>
     </objects>
     <object>objects\obj_enemy</object>
     <object>objects\obj_coin</object>

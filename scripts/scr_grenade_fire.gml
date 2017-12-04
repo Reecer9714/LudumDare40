@@ -1,5 +1,5 @@
 ///scr_gun_fire(bulletsper)
-if(cooldown && magsize > 0){
+if(cooldown && magsize > 0 && argument0[GunIndex.MagSize] > 0){
     if(parent.alarm[0] == -1) parent.recoil = recoil*-parent.image_yscale;
     
     repeat(bulletsper){

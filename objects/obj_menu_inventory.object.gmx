@@ -48,8 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>visible = false
-if instance_exists(obj_store) obj_store.visible = false
+            <string>if(instance_exists(obj_inventory)) exit;
+visible = false
+if instance_exists(obj_store) instance_destroy(obj_store)
 instance_create(x,y,obj_inventory)
 </string>
           </argument>

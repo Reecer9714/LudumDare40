@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>speed = 20
 damage = 1
+enemy = false
 </string>
           </argument>
         </arguments>
