@@ -46,12 +46,12 @@ global.guns[GunNames.SawedOff] = createGun("Sawed-Off", spr_shotgun, scr_gun_fir
 global.guns[GunNames.M32] = createGun("M32 Grenade Launcher", spr_grenade_launcher, scr_grenade_fire, obj_grenade, 10, 4, 3, 6,6, 4, 1, c_gray, 15, 1);
 
 global.guns[GunNames.HoneyBadger] = createGun("Honey Badger", spr_ar, scr_gun_fire, obj_bullet, 4, 2, 2, 25,25, 1, 1, c_yellow, 8, 5);
-global.guns[GunNames.FiveSeven] = createGun("Five-Seven", spr_pistol, scr_gun_fire, obj_bullet, 5, 1, 1, 15,15, 1, 1, c_yellow, 5, 5);
+global.guns[GunNames.FiveSeven] = createGun("Five-Seven", spr_pistol, scr_gun_fire, obj_bullet, 6, 1, 1, 15,15, 1, 1, c_yellow, 5, 5);
 global.guns[GunNames.Nova] = createGun("Nova", spr_shotgun, scr_gun_fire, obj_bullet, 20, 5, 3, 8,8, 3, 3, c_yellow, 8, 5);
 global.guns[GunNames.RPG] =createGun("RPG", spr_rpg, scr_rocket_fire, obj_rocket, 30, 6, 2, 1,1, 3, 1, c_yellow, 8, 5); 
 
-global.guns[GunNames.AK] = createGun("AK", spr_ar, scr_gun_fire, obj_bullet, 2,2,2, 30,30, 2.5, 1, c_blue, 8, 15)
-global.guns[GunNames.Deagle] = createGun("Deagle", spr_pistol, scr_gun_fire, obj_bullet, 6, 2, 1, 8,8, 1.5,1,c_blue,5,15)
+global.guns[GunNames.AK] = createGun("AK", spr_ar, scr_gun_fire, obj_bullet, 2,2,2, 30,30, 2, 1, c_blue, 8, 15)
+global.guns[GunNames.Deagle] = createGun("Deagle", spr_pistol, scr_gun_fire, obj_bullet, 8, 2, 1, 8,8, 1.5,1,c_blue,5,15)
 global.guns[GunNames.XM1014] = createGun("XM1014", spr_shotgun, scr_gun_fire, obj_bullet, 10, 4, 3, 15,15, 3,3, c_blue, 8, 15)
 //global.guns[GunNames.Lazer] =   
 

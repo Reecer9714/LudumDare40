@@ -25,11 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_create_guns()
+            <string>randomize()
+scr_create_guns()
 global.currentLevel = 0;
 global.levels[0] = rm_level1
 global.levels[1] = rm_dlc1
 global.levels[2] = rm_dlc2
+global.levels[3] = rm_end
 global.money = 120.00
 global.boughtPass = false
 global.pause = false
@@ -38,7 +40,7 @@ for(var i = 0; i &lt; 25; i++){
     global.inventory[i] = -1
 }
 
-global.primary = copyGun(global.guns[GunNames.M4A4])
+global.primary = copyGun(global.guns[GunNames.AK])
 global.secondary = -1
 </string>
           </argument>

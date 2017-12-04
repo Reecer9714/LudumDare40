@@ -72,11 +72,11 @@
     <scripts name="Guns">
       <script>scripts\scr_gun_fire.gml</script>
       <script>scripts\scr_grenade_fire.gml</script>
+      <script>scripts\scr_rocket_fire.gml</script>
       <script>scripts\scr_create_guns.gml</script>
       <script>scripts\scr_init_gun.gml</script>
       <script>scripts\createGun.gml</script>
       <script>scripts\scr_ball_fire.gml</script>
-      <script>scripts\scr_rocket_fire.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\Input.gml</script>

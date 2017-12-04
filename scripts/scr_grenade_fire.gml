@@ -7,6 +7,7 @@ if(cooldown && magsize > 0){
         var angle = image_angle + irandom_range(-accuracy,accuracy);
         projectile.image_angle = angle;
         projectile.direction = angle;
+        projectile.damage = damage;
     }
         
     cooldown = false;
