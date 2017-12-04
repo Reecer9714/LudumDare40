@@ -78,6 +78,7 @@ with(obj_gun){
           <argument>
             <kind>1</kind>
             <string>var temp = global.inventory[index]
+if(temp == -1) exit;
 global.inventory[index] = global.primary
 global.primary = temp
 with(obj_gun){
@@ -142,9 +143,9 @@ if(global.inventory[index] != -1){
             <string>if(instance_position(mouse_x,mouse_y,obj_invbox) == id){
     var item = global.inventory[index]
     switch(item[GunIndex.Color]){
-        case c_gray: global.money += 1
-        case c_yellow: global.money += 4
-        case c_blue: global.money += 10
+        case c_gray: global.money += 0.25 break;
+        case c_yellow: global.money += 2 break;
+        case c_blue: global.money += 10 break;
     }
     global.inventory[index] = -1
 }

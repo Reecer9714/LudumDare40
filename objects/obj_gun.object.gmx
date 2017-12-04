@@ -103,7 +103,12 @@ cooldown = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(parent != -1){
+            <string>if(!arrayEqual(currentGun,global.primary) || !arrayEqual(currentGun,global.secondary)){
+    currentGun = global.primary
+    scr_init_gun(global.primary)
+}
+
+if(parent != -1){
     attachToObject(parent, 0, 0)
     image_yscale = parent.image_yscale
     image_angle = parent.image_angle    
