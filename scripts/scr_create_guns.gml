@@ -53,7 +53,7 @@ global.guns[GunNames.RPG] =createGun("RPG", spr_rpg, scr_rocket_fire, obj_rocket
 global.guns[GunNames.AK] = createGun("AK", spr_ar, scr_gun_fire, obj_bullet, 2,2,2, 30,30, 2, 1, c_blue, 8, 15)
 global.guns[GunNames.Deagle] = createGun("Deagle", spr_pistol, scr_gun_fire, obj_bullet, 8, 2, 1, 8,8, 1.5,1,c_blue,5,15)
 global.guns[GunNames.XM1014] = createGun("XM1014", spr_shotgun, scr_gun_fire, obj_bullet, 10, 4, 3, 15,15, 3,3, c_blue, 8, 15)
-//global.guns[GunNames.Lazer] =   
+global.guns[GunNames.Lazer] = createGun("Lazer", spr_lazer, scr_rocket_fire, obj_player_lazer, 20, 8,0, 1,1, 3,1,c_blue,15,15)
 
 
 

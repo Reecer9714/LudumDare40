@@ -54,10 +54,10 @@
     <instance objName="obj_collision" x="992" y="416" name="inst_354BC76A" locked="0" code="" scaleX="67.5" scaleY="3.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="32" y="320" name="inst_D8885B3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_levelexit" x="2016" y="256" name="inst_C9E8E435" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boss_moon" x="1900" y="264" name="inst_AEA37AD1" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="928" y="288" name="inst_F34DDBB5" locked="0" code="initEnemy(spr_dog,20,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;/*&#xA;sprite_index = spr_dog&#xA;idleState = scr_dog_idle&#xA;chaseState = scr_dog_chase&#xA;collisionState = scr_dog_collision&#xA;alarm[0] = 30&#xA;max_hp = 20&#xA;*/" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="576" y="288" name="inst_FCECCB77" locked="0" code="initEnemy(spr_dog,20,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="1312" y="288" name="inst_7B55EEF8" locked="0" code="initEnemy(spr_dog,20,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_army" x="1933" y="281" name="inst_28868038" locked="0" code="" scaleX="3.5" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

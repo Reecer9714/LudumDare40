@@ -17,6 +17,7 @@
       <sprite>sprites\spr_pistol</sprite>
       <sprite>sprites\spr_grenade_launcher</sprite>
       <sprite>sprites\spr_shotgun</sprite>
+      <sprite>sprites\spr_lazer</sprite>
     </sprites>
     <sprites name="GunStuff">
       <sprite>sprites\spr_explosion</sprite>
@@ -26,6 +27,7 @@
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_purple_ball</sprite>
       <sprite>sprites\spr_purple_lazer</sprite>
+      <sprite>sprites\spr_player_lazer</sprite>
       <sprite>sprites\spr_rocket</sprite>
     </sprites>
     <sprites name="Menu">
@@ -52,7 +54,8 @@
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_dog</sprite>
-      <sprite>sprites\spr_boss_moon</sprite>
+      <sprite>sprites\spr_alienboss</sprite>
+      <sprite>sprites\spr_tank</sprite>
     </sprites>
     <sprite>sprites\spr_levelexit</sprite>
     <sprite>sprites\spr_money</sprite>
@@ -109,6 +112,8 @@
       <object>objects\obj_grenade_hit</object>
       <object>objects\obj_plasma_ball</object>
       <object>objects\obj_rocket</object>
+      <object>objects\obj_plasma_lazer</object>
+      <object>objects\obj_player_lazer</object>
     </objects>
     <objects name="Inventory">
       <object>objects\obj_inventory</object>
@@ -144,6 +149,7 @@
     <object>objects\obj_coin</object>
     <object>objects\obj_money</object>
     <object>objects\obj_boss_moon</object>
+    <object>objects\obj_boss_army</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_buygame</room>

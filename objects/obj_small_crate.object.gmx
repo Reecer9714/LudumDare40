@@ -25,13 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>possibleGuns[0] = global.guns[GunNames.M4A4]
+            <string>image_speed = 0
+possibleGuns[0] = global.guns[GunNames.M4A4]
 possibleGuns[1] = global.guns[GunNames.Glock]
 possibleGuns[2] = global.guns[GunNames.SawedOff]
 possibleGuns[3] = global.guns[GunNames.M32]
 recievedItem = -1;
 fullAlert = false
 price = 1.99
+startY = 30
 </string>
           </argument>
         </arguments>
@@ -77,7 +79,9 @@ price = 1.99
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>recievedItem = -1
+            <string>///Reset Item
+recievedItem = -1
+startY = 32
 </string>
           </argument>
         </arguments>
@@ -101,6 +105,30 @@ price = 1.99
           <argument>
             <kind>1</kind>
             <string>buyCrate()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0
+image_index = 0
 </string>
           </argument>
         </arguments>

@@ -7,6 +7,9 @@ if(global.money >= price){
         fullAlert = false
         recievedItem = item
         global.money-=price
-        alarm[0] = 2*room_speed
+        alarm[0] = 1.3*room_speed
+        image_index = 0
+        image_speed = 0.4
+        startY = 30
     }  
 }
