@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>if(!obj_control.switches[? "tech_boss_defeated"]){
-    instance_activate_object(obj_control);
+    instance_activate_object(obj_boss_tech);
     obj_control.switches[? "tech_boss_started"] = true;
 }
 </string>

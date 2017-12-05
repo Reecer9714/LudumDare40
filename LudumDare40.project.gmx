@@ -10,6 +10,7 @@
       <sprite>sprites\spr_player_idle</sprite>
       <sprite>sprites\spr_player_walk</sprite>
       <sprite>sprites\spr_player_arms</sprite>
+      <sprite>sprites\spr_health</sprite>
     </sprites>
     <sprites name="Guns">
       <sprite>sprites\spr_ar</sprite>
@@ -25,14 +26,19 @@
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_bullet_hit</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_tech_bullet</sprite>
+      <sprite>sprites\spr_enemy_bullet</sprite>
       <sprite>sprites\spr_purple_ball</sprite>
       <sprite>sprites\spr_purple_lazer</sprite>
       <sprite>sprites\spr_player_lazer</sprite>
+      <sprite>sprites\spr_alien_lazer</sprite>
       <sprite>sprites\spr_rocket</sprite>
+      <sprite>sprites\spr_electric</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_inventory</sprite>
       <sprite>sprites\spr_startgame</sprite>
+      <sprite>sprites\spr_retry</sprite>
       <sprite>sprites\spr_store</sprite>
       <sprite>sprites\spr_exit</sprite>
       <sprite>sprites\spr_back</sprite>
@@ -59,7 +65,7 @@
       <sprite>sprites\spr_blue_dog</sprite>
       <sprite>sprites\spr_alienboss</sprite>
       <sprite>sprites\spr_tank</sprite>
-      <sprite>sprites\obj_soldier_idle</sprite>
+      <sprite>sprites\spr_soldier_idle</sprite>
       <sprite>sprites\spr_soldier_walk</sprite>
       <sprite>sprites\spr_alien</sprite>
       <sprite>sprites\spr_techorb</sprite>
@@ -103,6 +109,8 @@
       <script>scripts\createEnemy.gml</script>
       <script>scripts\initEnemy.gml</script>
       <script>scripts\scr_minion_idle.gml</script>
+      <script>scripts\scr_eye_idle.gml</script>
+      <script>scripts\scr_alien_idle.gml</script>
     </scripts>
     <scripts name="LootBox">
       <script>scripts\openCrate.gml</script>
@@ -125,6 +133,8 @@
       <object>objects\obj_rocket</object>
       <object>objects\obj_plasma_lazer</object>
       <object>objects\obj_player_lazer</object>
+      <object>objects\obj_alien_lazer</object>
+      <object>objects\obj_electric</object>
     </objects>
     <objects name="Inventory">
       <object>objects\obj_inventory</object>
@@ -141,6 +151,7 @@
       <object>objects\obj_startgame</object>
       <object>objects\obj_store</object>
       <object>objects\obj_back</object>
+      <object>objects\obj_retry</object>
     </objects>
     <objects name="Lootboxes">
       <object>objects\obj_small_crate</object>
@@ -159,6 +170,9 @@
       <object>objects\obj_tech_trigger</object>
       <object>objects\obj_space_trigger</object>
       <object>objects\obj_enemy</object>
+      <object>objects\obj_projectile</object>
+      <object>objects\obj_dead</object>
+      <object>objects\obj_lazer</object>
     </objects>
     <objects name="Boss">
       <object>objects\obj_boss_army</object>

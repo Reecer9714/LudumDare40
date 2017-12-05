@@ -103,7 +103,12 @@ cooldown = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!(arrayEqual(currentGun,global.primary) || arrayEqual(currentGun,global.secondary))){
+            <string>if(global.pause){
+    alarm[0] = alarm[0]+1
+    alarm[1] = alarm[1]+1
+}
+
+if(!(arrayEqual(currentGun,global.primary) || arrayEqual(currentGun,global.secondary))){
     currentGun = global.primary
     scr_init_gun(global.primary)
 }

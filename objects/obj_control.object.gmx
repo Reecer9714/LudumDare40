@@ -40,6 +40,10 @@ for(var i = 0; i &lt; 25; i++){
     global.inventory[i] = -1
 }
 
+for(var i = 1; i&lt;GunNames.Length; i++){
+    global.inventory[i] = copyGun(global.guns[i]);
+}
+
 global.primary = copyGun(global.guns[GunNames.M4A4])
 global.secondary = -1
 

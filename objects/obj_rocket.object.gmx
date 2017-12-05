@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_projectile</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 20
+            <string>enemy = false
+speed = 20
 damage = 1
 </string>
           </argument>
@@ -51,6 +52,7 @@ damage = 1
             <kind>1</kind>
             <string>var dmg = instance_create(x,y,obj_grenade_hit);
 dmg.damage = damage
+dmg.enemy = enemy
 </string>
           </argument>
         </arguments>

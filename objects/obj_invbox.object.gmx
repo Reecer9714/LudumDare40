@@ -140,7 +140,8 @@ if(global.inventory[index] != -1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_position(mouse_x,mouse_y,obj_invbox) == id){
+            <string>var viewX = view_xview[0]
+if(instance_position(mouse_x-viewX,mouse_y,obj_invbox) == id){
     var item = global.inventory[index]
     if(item == -1) exit;
     switch(item[GunIndex.Color]){

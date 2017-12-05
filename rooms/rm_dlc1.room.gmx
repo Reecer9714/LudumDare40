@@ -7,10 +7,10 @@
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>room_persistent = true</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -54,8 +54,13 @@
     <instance objName="obj_collision" x="1024" y="416" name="inst_1CB23688" locked="0" code="" scaleX="64.5" scaleY="3.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="32" y="320" name="inst_9AA8908E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_levelexit" x="2016" y="256" name="inst_E458B634" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tech_trigger" x="1504" y="256" name="inst_52937430" locked="0" code="" scaleX="1.5" scaleY="6.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boss_tech" x="1935" y="282" name="inst_9F0BBA8E" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tech_trigger" x="1536" y="256" name="inst_52937430" locked="0" code="" scaleX="1.5" scaleY="6.5" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="1935" y="282" name="inst_9F0BBA8E" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_tech" x="1931" y="286" name="inst_5EC3E45B" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="448" y="288" name="inst_F355F55F" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="672" y="288" name="inst_C6893A7E" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="928" y="288" name="inst_F186014B" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="1216" y="288" name="inst_225C73E7" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

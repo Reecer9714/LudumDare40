@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]-32+view_hview[0]/2,obj_menu_inventory)
-instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]+48+view_hview[0]/2,obj_store)
+            <string>items = instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]-32+view_hview[0]/2,obj_menu_inventory)
+store = instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]+48+view_hview[0]/2,obj_store)
 </string>
           </argument>
         </arguments>
@@ -50,8 +50,8 @@ instance_create(view_xview[0]+view_wview[0]/2,view_yview[0]+48+view_hview[0]/2,o
           <argument>
             <kind>1</kind>
             <string>global.pause = false
-instance_destroy(obj_menu_inventory)
-instance_destroy(obj_store)
+instance_destroy(items)
+instance_destroy(store)
 instance_destroy()
 </string>
           </argument>

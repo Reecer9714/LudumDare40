@@ -1,6 +1,6 @@
 if(global.money >= price){
     var item = openCrate()
-    if(addItem(item)){
+    if(addItem(copyGun(item))){
         fullAlert = true
         alarm[1] = 2*room_speed
     }else{

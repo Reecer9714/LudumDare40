@@ -3,7 +3,8 @@ if(!instance_exists(obj_control)) instance_create(0,0,obj_control)
 
 image_speed = 1
 facing = 1
-hp = 100
+max_hp = 100
+hp = max_hp
 maxspeed = 5
 hand = instance_create(x,y,obj_hand)
 hand.parent = self
@@ -15,7 +16,7 @@ audio_listener_orientation(0,0,-1, 0,1,0);
 #define scr_player_step
 Input();
 if(global.pause){
-    if(!instance_exists(obj_pause)){
+    if(!(instance_exists(obj_pause) || instance_exists(obj_dead))){
         global.pause = false
     }else exit;
 }
@@ -74,7 +75,7 @@ if (place_meeting(x, y+vspeed , obj_collision)) {
     vspeed = 0;
 }
 
-cameraFollow(0,self)
+cameraFollow(0,self,128)
 
 //Move to gun
 if(PrimaryFire){
@@ -82,3 +83,8 @@ if(PrimaryFire){
 }
 
 hand.image_angle = Aim
+
+if(hp <= 0){
+    hp = 0
+    instance_create(x,y,obj_dead)
+}
