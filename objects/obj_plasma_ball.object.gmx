@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>enemy = false
+speed = 15
+damage = 1
 </string>
           </argument>
         </arguments>

@@ -19,6 +19,8 @@ if(!cooldown){
     var electric = instance_create(x,y,obj_electric);
     electric.image_angle = point_direction(x,y,obj_player.x,obj_player.y);
     cooldown = true
-}else{
-    alarm[1] = 10
+}else if(alarm[1] <= 0){
+    alarm[1] = 30
 }
+
+if (distance_to_object(obj_player) > 256) state = e_state.idle;

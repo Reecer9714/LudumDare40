@@ -12,6 +12,8 @@ if(!cooldown){
     lazer.image_angle = point_direction(x,y,obj_player.x,obj_player.y);
     lazer.direction = lazer.image_angle
     cooldown = true
-}else{
-    alarm[1] = 10
+}else if(alarm[1] <= 0){
+    alarm[1] = 30
 }
+
+if (distance_to_object(obj_player) > 256) state = e_state.idle;

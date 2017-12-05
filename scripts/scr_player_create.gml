@@ -84,6 +84,8 @@ if(PrimaryFire){
 
 hand.image_angle = Aim
 
+audio_listener_position(x,y,0);
+
 if(hp <= 0){
     hp = 0
     instance_create(x,y,obj_dead)

@@ -108,7 +108,7 @@ cooldown = true
     alarm[1] = alarm[1]+1
 }
 
-if(!(arrayEqual(currentGun,global.primary) || arrayEqual(currentGun,global.secondary))){
+if(!arrayEqual(currentGun,global.primary) &amp;&amp; !arrayEqual(currentGun,global.secondary)){
     currentGun = global.primary
     scr_init_gun(global.primary)
 }
@@ -161,17 +161,20 @@ if(keyboard_check_pressed(ord('F'))){
             <string>var height = display_get_gui_height()
 
 //Draw Ammo
+if(currentGun != -1){
 var sep = 16
 for(var i = 0; i &lt; currentGun[GunIndex.MagSize]; i++){
     var sprite = object_get_sprite(currentGun[GunIndex.Bullet])
     draw_sprite_ext(sprite,0,sep+i*sprite_get_height(sprite)*3,height-sprite_get_height(sprite)*3-16,3,3,90,c_white,1)
     sep+=4
 }
+
 //Draw Reloading
 if(currentGun[GunIndex.MagSize] &lt;= 0){
     var val = 1-alarm[1]/reload;
     draw_healthbar(16,height-48,250,height-16,val*100,c_black,c_white,c_white,0,true,true)
     draw_text(16,height-32-string_height(" "),"Reloading")
+}
 }
 </string>
           </argument>

@@ -96,8 +96,9 @@ if(spawned &lt; 3){
             <string>///Lazer
 var xx = x-16;
 var yy = y;
-var bullet = instance_create(xx,yy,obj_rocket);
+var bullet = instance_create(xx,yy,obj_plasma_lazer);
 bullet.enemy = true;
+bullet.damage = 2.5
 bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
 bullet.image_angle = bullet.direction
 image_index = 1
@@ -128,9 +129,10 @@ var xx = x-1;
 var yy = y+12;
 var bullet = instance_create(xx,yy,obj_plasma_ball);
 bullet.enemy = true;
+bullet.damage = 10
 bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
 bullet.image_angle = bullet.direction
-image_index = 2
+image_index = 1
 </string>
           </argument>
         </arguments>

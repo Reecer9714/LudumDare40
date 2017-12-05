@@ -26,12 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>enemy = false
+damage = 1
 image_speed = 0.5
 startX = x
 startY = y
 maxdist = 7*64//7 parts
 distFromStart = 0
-speed = 5
+speed = 20
 direction = 180
 </string>
           </argument>
@@ -63,8 +64,6 @@ if(distFromStart &gt;= maxdist){
 }
 
 if(image_alpha &lt;= 0.1){
-    //Dont create new
-    instance_create(startX,startY,obj_plasma_lazer)
     instance_destroy()
 }
 </string>

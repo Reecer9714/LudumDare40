@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="8">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,42 +48,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var temp = global.inventory[index]
-global.inventory[index] = global.secondary
-global.secondary = temp
-with(obj_gun){
-    currentGun = global.secondary
-    if(currentGun != -1) scr_init_gun(global.secondary)
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>var temp = global.inventory[index]
-if(temp == -1) exit;
-global.inventory[index] = global.primary
-global.primary = temp
-with(obj_gun){
-    currentGun = global.primary
-    if(currentGun != -1) scr_init_gun(global.primary)
+            <string>var viewX = view_xview[0];
+if(mouse_check_button_released(mb_left)){
+    if(position_meeting(mouse_x-viewX,mouse_y,id)){
+        var temp = global.inventory[index]
+        if(temp == -1) exit;
+        global.inventory[index] = global.primary
+        global.primary = temp
+        with(obj_gun){
+            if(currentGun != -1 &amp;&amp; !is_array(currentGun)){
+                currentGun = global.primary
+                scr_init_gun(global.primary)
+            }
+        }
+    }
+}else if(mouse_check_button_released(mb_right)){
+    if(position_meeting(mouse_x-viewX,mouse_y,id)){
+        var temp = global.inventory[index]
+        global.inventory[index] = global.secondary
+        global.secondary = temp
+        with(obj_gun){
+            if(currentGun != -1 &amp;&amp; !is_array(currentGun)){
+                currentGun = global.secondary
+                scr_init_gun(global.secondary)
+            }else{
+                currentGun = global.primary
+                scr_init_gun(global.primary)
+            }
+        }  
+    }
 }
 </string>
           </argument>

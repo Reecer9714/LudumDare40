@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_alpha = 0;
-image_speed = 0;
+image_speed = 1;
 activated = false;
 attack_speed = 15;
 
@@ -102,7 +102,7 @@ var bullet = instance_create(xx,yy,obj_rocket);
 bullet.enemy = true;
 bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
 bullet.image_angle = bullet.direction
-image_index = 1
+audio_play_sound_at(s_tech_missile,x,y,0,100, 300, 1, false, 1);
 </string>
           </argument>
         </arguments>
@@ -131,9 +131,11 @@ var xx = x-23;
 var yy = y+6;
 var bullet = instance_create(xx,yy,obj_bullet);
 bullet.enemy = true;
+bullet.damage = 2
 bullet.sprite_index = spr_tech_bullet
 bullet.direction = point_direction(xx,yy,obj_player.x,obj_player.y)
 bullet.image_angle = bullet.direction
+audio_play_sound_at(s_tech_lazer,x,y,0,100, 300, 1, false, 1);
 
 if(bulletsShot &lt; 10){
     alarm[1] = 5
@@ -205,6 +207,7 @@ if(obj_control.switches[? "tech_boss_started"] &amp;&amp; !obj_control.switches[
 
 if(hp &lt;= 0){
     if(!instance_exists(obj_money_fountain)) instance_create(x,y,obj_money_fountain)
+    if(!audio_is_playing(s_tech_death)) audio_play_sound_at(s_tech_death,x,y,0, 100, 300, 1, false, 1);
     obj_control.switches[? "tech_boss_defeated"] = true
     alarm[0] = -1;
     alarm[1] = -1;

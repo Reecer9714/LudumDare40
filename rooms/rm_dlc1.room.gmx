@@ -55,7 +55,6 @@
     <instance objName="obj_player" x="32" y="320" name="inst_9AA8908E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_levelexit" x="2016" y="256" name="inst_E458B634" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tech_trigger" x="1536" y="256" name="inst_52937430" locked="0" code="" scaleX="1.5" scaleY="6.5" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="1935" y="282" name="inst_9F0BBA8E" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_boss_tech" x="1931" y="286" name="inst_5EC3E45B" locked="0" code="" scaleX="2.5" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="448" y="288" name="inst_F355F55F" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="672" y="288" name="inst_C6893A7E" locked="0" code="initEnemy(spr_blue_dog,40,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

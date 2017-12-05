@@ -21,7 +21,7 @@ if(!cooldown){
     bullet.image_angle = bullet.direction
     cooldown = true
 }else{
-    alarm[1] = 5
+    alarm[1] = 10
 }
 
 if (distance_to_object(obj_player) > 256) state = e_state.idle;

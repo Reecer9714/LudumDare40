@@ -54,9 +54,8 @@
     <instance objName="obj_collision" x="1024" y="416" name="inst_2E38C65F" locked="0" code="" scaleX="66.5" scaleY="3.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="32" y="320" name="inst_7ABF76E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_levelexit" x="2016" y="256" name="inst_9A279AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="1949" y="297" name="inst_1D1315C5" locked="0" code="" scaleX="2.09999990463257" scaleY="2.09999990463257" colour="4294967295" rotation="0"/>
     <instance objName="obj_space_trigger" x="1504" y="256" name="inst_4F120FB1" locked="0" code="" scaleX="1.25" scaleY="8" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boss_moon" x="1952" y="293" name="inst_75F2ED72" locked="0" code="" scaleX="2.09999990463257" scaleY="2.09999990463257" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boss_moon" x="1955" y="297" name="inst_75F2ED72" locked="0" code="" scaleX="2.09999990463257" scaleY="2.09999990463257" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="416" y="288" name="inst_CE8DDF44" locked="0" code="initEnemy(spr_purple_dog,50,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="704" y="288" name="inst_1F706B54" locked="0" code="initEnemy(spr_purple_dog,50,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="992" y="288" name="inst_D91EED95" locked="0" code="initEnemy(spr_purple_dog,50,1,createArray(scr_dog_idle,scr_dog_chase,-1,scr_dog_collision))&#xA;alarm[0] = 30&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

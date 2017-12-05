@@ -100,7 +100,7 @@ if(global.primary != -1){
 //Secondary
 draw_sprite(spr_invbox,0,viewX+baseSize,baseSize*3)
 if(global.secondary != -1){
-    draw_text(baseSize,baseSize*4,"Name: "+global.secondary[GunIndex.Name])
+    draw_text(viewX+baseSize,baseSize*4,"Name: "+global.secondary[GunIndex.Name])
     var color = global.secondary[GunIndex.Color]
     var sprite = global.secondary[GunIndex.Sprite]
     var xx = viewX+(baseSize + 32) - sprite_get_xoffset(sprite)
