@@ -108,9 +108,12 @@ cooldown = true
     alarm[1] = alarm[1]+1
 }
 
-if(!arrayEqual(currentGun,global.primary) &amp;&amp; !arrayEqual(currentGun,global.secondary)){
-    currentGun = global.primary
-    scr_init_gun(global.primary)
+var primary = global.primary;
+var secondary = global.secondary;
+
+if(!arrayEqual(currentGun,primary) &amp;&amp; !arrayEqual(currentGun,secondary)){
+    currentGun = primary
+    scr_init_gun(primary)
 }
 
 if(parent != -1){
@@ -124,11 +127,11 @@ if(alarm[1] == -1 &amp;&amp; currentGun[GunIndex.MagSize] &lt;= 0){
 }
 
 if(keyboard_check_pressed(ord('F'))){
-    if(global.primary == -1 || global.secondary == -1) exit;
-    if(arrayEqual(currentGun,global.primary)){
-            currentGun = global.secondary
+    if(primary == -1 || secondary == -1) exit;
+    if(arrayEqual(currentGun,primary)){
+            currentGun = secondary
     }else{
-        currentGun = global.primary
+        currentGun = primary
     }
     scr_init_gun(currentGun)
     alarm[0] = -1

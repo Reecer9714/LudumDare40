@@ -26,14 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0
-possibleGuns[0] = global.guns[GunNames.M4A4]
-possibleGuns[1] = global.guns[GunNames.Glock]
-possibleGuns[2] = global.guns[GunNames.SawedOff]
-possibleGuns[3] = global.guns[GunNames.M32]
-possibleGuns[4] = global.guns[GunNames.HoneyBadger]
-possibleGuns[5] = global.guns[GunNames.FiveSeven]
-possibleGuns[6] = global.guns[GunNames.Nova]
-possibleGuns[7] = global.guns[GunNames.RPG]
+var guns = global.guns;
+possibleGuns[0] = guns[GunNames.M4A4]
+possibleGuns[1] = guns[GunNames.Glock]
+possibleGuns[2] = guns[GunNames.SawedOff]
+possibleGuns[3] = guns[GunNames.M32]
+possibleGuns[4] = guns[GunNames.HoneyBadger]
+possibleGuns[5] = guns[GunNames.FiveSeven]
+possibleGuns[6] = guns[GunNames.Nova]
+possibleGuns[7] = guns[GunNames.RPG]
 price = 4.99
 recievedItem = -1;
 fullAlert = false

@@ -1,6 +1,6 @@
 ///createArray(*args);
 var arr;
-for (var i=0;i<argument_count;i+=1)
+for (var i = argument_count-1; i >= 0; i--)
 {
     arr[i] = argument[i];
 }

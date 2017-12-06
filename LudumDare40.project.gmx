@@ -125,6 +125,9 @@
       <script>scripts\buyCrate.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\f_default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_hand</object>

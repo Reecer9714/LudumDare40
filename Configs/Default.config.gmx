@@ -233,8 +233,8 @@
     <option_html5_advertising_type>Supersonic Ads</option_html5_advertising_type>
     <option_html5_allow_fullscreen>True</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>False</option_html5_alwaysreload>
-    <option_html5_browser_title>Created with GameMaker: Studio</option_html5_browser_title>
-    <option_html5_centergame>False</option_html5_centergame>
+    <option_html5_browser_title>Boxes of Guns</option_html5_browser_title>
+    <option_html5_centergame>True</option_html5_centergame>
     <option_html5_facebook_app_display_name></option_html5_facebook_app_display_name>
     <option_html5_facebook_appid></option_html5_facebook_appid>
     <option_html5_facebook_enable>0</option_html5_facebook_enable>
@@ -246,7 +246,7 @@
     <option_html5_google_tracking_id></option_html5_google_tracking_id>
     <option_html5_icon>Configs\Default\html5\fav.ico</option_html5_icon>
     <option_html5_index>-1</option_html5_index>
-    <option_html5_interpolate>-1</option_html5_interpolate>
+    <option_html5_interpolate>0</option_html5_interpolate>
     <option_html5_jsprepend></option_html5_jsprepend>
     <option_html5_loadingbar>-1</option_html5_loadingbar>
     <option_html5_localrunalert>True</option_html5_localrunalert>
@@ -429,8 +429,32 @@
     <option_textureGroup0_parent>&lt;none&gt;</option_textureGroup0_parent>
     <option_textureGroup0_scaled>0</option_textureGroup0_scaled>
     <option_textureGroup0_targets>9223372036854775807</option_textureGroup0_targets>
-    <option_textureGroup_count>1</option_textureGroup_count>
+    <option_textureGroup1_border>2</option_textureGroup1_border>
+    <option_textureGroup1_nocropping>0</option_textureGroup1_nocropping>
+    <option_textureGroup1_parent>&lt;none&gt;</option_textureGroup1_parent>
+    <option_textureGroup1_scaled>0</option_textureGroup1_scaled>
+    <option_textureGroup1_targets>9223372036854775807</option_textureGroup1_targets>
+    <option_textureGroup2_border>2</option_textureGroup2_border>
+    <option_textureGroup2_nocropping>0</option_textureGroup2_nocropping>
+    <option_textureGroup2_parent>&lt;none&gt;</option_textureGroup2_parent>
+    <option_textureGroup2_scaled>0</option_textureGroup2_scaled>
+    <option_textureGroup2_targets>9223372036854775807</option_textureGroup2_targets>
+    <option_textureGroup3_border>2</option_textureGroup3_border>
+    <option_textureGroup3_nocropping>0</option_textureGroup3_nocropping>
+    <option_textureGroup3_parent>&lt;none&gt;</option_textureGroup3_parent>
+    <option_textureGroup3_scaled>0</option_textureGroup3_scaled>
+    <option_textureGroup3_targets>9223372036854775807</option_textureGroup3_targets>
+    <option_textureGroup4_border>2</option_textureGroup4_border>
+    <option_textureGroup4_nocropping>0</option_textureGroup4_nocropping>
+    <option_textureGroup4_parent>&lt;none&gt;</option_textureGroup4_parent>
+    <option_textureGroup4_scaled>0</option_textureGroup4_scaled>
+    <option_textureGroup4_targets>9223372036854775807</option_textureGroup4_targets>
+    <option_textureGroup_count>5</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
+    <option_textureGroups1>Level1</option_textureGroups1>
+    <option_textureGroups2>DLC1</option_textureGroups2>
+    <option_textureGroups3>DLC2</option_textureGroups3>
+    <option_textureGroups4>Menu</option_textureGroups4>
     <option_tizen_app_id>http://yourdomain/LudumDare40</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
     <option_tizen_display_name>LudumDare40</option_tizen_display_name>

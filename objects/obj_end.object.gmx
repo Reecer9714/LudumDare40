@@ -64,10 +64,12 @@ if(global.currentLevel &lt; 3){
             <kind>1</kind>
             <string>draw_set_halign(fa_center)
 draw_text(x,y,"You Win!")
-if(global.currentLevel &lt; 3){
+var currentLevel = global.currentLevel;
 
-if(global.currentLevel == 1) draw_text(x,y+32,"Continue the Fun in the Tech DLC,")
-if(global.currentLevel == 2) draw_text(x,y+32,"Continue the Fun in the Space DLC,")
+if(currentLevel &lt; 3){
+
+if(currentLevel == 1) draw_text(x,y+32,"Continue the Fun in the Tech DLC,")
+if(currentLevel == 2) draw_text(x,y+32,"Continue the Fun in the Space DLC,")
 draw_text(x,y+64,"which adds a new level, weapons, and enemies")
 
 if(!global.boughtPass){ draw_text(x,y+96,"Buy it now for $20")

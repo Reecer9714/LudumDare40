@@ -82,15 +82,17 @@ for(var i = 0; i &lt; 25; i++){
             <kind>1</kind>
             <string>//Primary
 var viewX = view_xview[0]
+var primary = global.primary;
+var secondary = global.secondary;
 
 draw_rectangle_colour(viewX+baseSize*4,baseSize/2,viewX+baseSize*9,baseSize,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false)
 draw_text(viewX+baseSize*4.25,baseSize*0.75,"Press E on a weapon to sell it")
 draw_rectangle_colour(viewX+baseSize/2,baseSize/2,viewX+baseSize*4,baseSize*5,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false)
 draw_sprite(spr_invbox,0,viewX+baseSize,baseSize)
-if(global.primary != -1){
-    draw_text(viewX+baseSize,baseSize*2,"Name: "+global.primary[GunIndex.Name])
-    var color = global.primary[GunIndex.Color]
-    var sprite = global.primary[GunIndex.Sprite]
+if(primary != -1){
+    draw_text(viewX+baseSize,baseSize*2,"Name: "+primary[GunIndex.Name])
+    var color = primary[GunIndex.Color]
+    var sprite = primary[GunIndex.Sprite]
     var xx = viewX+(baseSize + 32) - sprite_get_xoffset(sprite)
     var yy = (baseSize + 36) + sprite_get_yoffset(sprite)
     draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
@@ -99,34 +101,16 @@ if(global.primary != -1){
 }
 //Secondary
 draw_sprite(spr_invbox,0,viewX+baseSize,baseSize*3)
-if(global.secondary != -1){
-    draw_text(viewX+baseSize,baseSize*4,"Name: "+global.secondary[GunIndex.Name])
-    var color = global.secondary[GunIndex.Color]
-    var sprite = global.secondary[GunIndex.Sprite]
+if(secondary != -1){
+    draw_text(viewX+baseSize,baseSize*4,"Name: "+secondary[GunIndex.Name])
+    var color = secondary[GunIndex.Color]
+    var sprite = secondary[GunIndex.Sprite]
     var xx = viewX+(baseSize + 32) - sprite_get_xoffset(sprite)
     var yy = (baseSize*3 + 36) + sprite_get_yoffset(sprite)
     draw_sprite_ext(sprite,0,xx,yy,1.5,1.5,45,color,1)
 }else{
     draw_text(viewX+baseSize,baseSize*4,"Right Click to Equip")
 }
-
-//Draw Inventory
-/*
-for(var i = 0; i &lt; 25; i++){
-    var yy = offsetY + floor(i / 5) * baseSize
-    var xx = offsetX + (i % 5) * baseSize
-    draw_rectangle(xx,yy,xx+baseSize,yy+baseSize,true)
-    
-    if(global.inventory[i] != 0){
-        var item = global.inventory[i];
-        var color = item[GunIndex.Color]
-        var sprite = item[GunIndex.Sprite]
-        //draw_sprite_general(sprite,0,-sprite_get_xoffset(sprite),0,32,32,xx,yy,3,3,0,color,color,color,color,1)
-        //draw_sprite_stretched_ext(item[GunIndex.Sprite],0, xx,yy, baseSize,baseSize, item[GunIndex.Color],1)
-        draw_sprite_ext(sprite,0,xx+(baseSize-sprite_get_width(sprite))/2.5,yy+(baseSize-sprite_get_height(sprite)),3,3,45,color,1)
-    }
-}
-*/
 </string>
           </argument>
         </arguments>
